@@ -1,0 +1,65 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, serif;
+}
+
+.post {
+  max-width: 1280px;
+  margin: auto;
+}
+.post-list {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 30px;
+  justify-content: center;
+}
+.post-item {
+  border: 1px solid #333;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+.post-checkbox {
+  order: 1;
+  margin: auto auto 0 0;
+}
+.post-checkbox:checked ~ div {
+  color: #fff;
+}
+.post-checkbox:checked ~ .post-title::before {
+  background-color: #333;
+}
+.post-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+}
+.post-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.post-text {
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}/*# sourceMappingURL=main.css.map */
